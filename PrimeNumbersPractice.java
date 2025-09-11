@@ -19,6 +19,14 @@ public class PrimeNumbersPractice
 		swapThegivenNumbers();
 		// add sum even numbers from array
 		addSumOfEvenNumbersFromArray();
+
+		
+		factorialNumbers();
+		
+		fibananicSeries();
+		printLargeChar();
+		printSamllestNumber();
+
 	}
 	
 	private static int palindromeCheck(){
@@ -98,5 +106,65 @@ public class PrimeNumbersPractice
 	    }
 	    
 	    System.out.println("sum of the even numbers from given array :" + sum);
+	}
+
+	
+	private static void factorialNumbers(){
+	    int number =6;
+	    if(number < 0){
+	        System.out.println("there is no factorials for negative numbers");
+	    }
+	    
+	    int factorialNumber = 1;
+	    
+	    for(int i =1; i<=number; i++){
+	        factorialNumber*=i;
+	    }
+	    
+	    System.out.println("the given number is : " + number + " and " + "factorial for this number is :" + factorialNumber);
+	}
+	
+	private static void fibananicSeries(){
+	    int number = 3;
+	    int first =0; int second =1;
+	    
+	    for(int i =0; i <=number; i++){
+	        int next = first + second;
+	        first = second;
+	        second = next;
+	        System.out.println("number of iterations are :" + next);
+	    }
+	}
+	
+	private static void printLargeChar(){
+	    int number = 9901234;
+	     int extractNumber = 0;
+	    while(number!=0){
+	        int remainder = number %10;
+	        if(remainder > extractNumber){ // 4 >0  
+	            extractNumber = remainder; //enum = 4;
+	        }
+	        number =number/10;
+	        
+	    }
+	    
+	    System.out.println("extract number :" + extractNumber);
+	}
+	
+	private static void printSamllestNumber(){
+	    int number = 586745641;
+	    int smallest = 9;
+	    while(number!=0){
+	        int remainder = number%10;
+	        if(remainder < smallest){  //1, 4 
+	            smallest =remainder;   //1
+	        }
+	       
+	        number = number/10;
+	    }
+	    
+	    System.out.println("smallest number : " + smallest);
+	    
+	    
 	}
 }
