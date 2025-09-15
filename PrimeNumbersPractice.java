@@ -24,8 +24,10 @@ public class PrimeNumbersPractice
 		factorialNumbers();
 		
 		fibananicSeries();
+
 		printLargeChar();
 		printSamllestNumber();
+
 
 	}
 	
@@ -135,6 +137,7 @@ public class PrimeNumbersPractice
 	        System.out.println("number of iterations are :" + next);
 	    }
 	}
+
 	
 	private static void printLargeChar(){
 	    int number = 9901234;
@@ -167,4 +170,5 @@ public class PrimeNumbersPractice
 	    
 	    
 	}
+
 }
